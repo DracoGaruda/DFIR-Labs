@@ -86,12 +86,10 @@ You have been provided with a disk triage of the compromised host. Your mission 
 ### Task 7
 **Question:** The initial JavaScript file employed specific technique to evade security controls and prevent detection. What is the MITRE ATT&CK technique ID for the method used by the JavaScript file?
 
-**Answer:** ``
+**Answer:** `T1562.001`
 
-**Explanation:**
+**Explanation:** 
 
-
-> *Screenshot placeholder*
 ---
 
 ### Task 8
@@ -119,12 +117,13 @@ You have been provided with a disk triage of the compromised host. Your mission 
 ### Task 10
 **Question:** As part of its persistence strategy, the malware created a copy of itself in a different location. What is the full path where the malware copied itself?
 
-**Answer:** ``
+**Answer:** `C:\Users\Administrator\AppData\Roaming\host\swchost.exe`
 
-**Explanation:**
+**Explanation:** Look for Sysmon Event ID 11 for swchost.exe
 
 
-> *Screenshot placeholder*
+> <img width="1689" height="1108" alt="Q10" src="https://github.com/user-attachments/assets/d2543e13-0265-4adb-9a45-8c0aa1bfe404" />
+
 ---
 
 ### Task 11
@@ -181,6 +180,7 @@ You have been provided with a disk triage of the compromised host. Your mission 
 
 > *Screenshot placeholder*
 ---
+
 
 
 
