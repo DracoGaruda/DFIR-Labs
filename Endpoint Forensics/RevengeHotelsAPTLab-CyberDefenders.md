@@ -46,45 +46,41 @@ You have been provided with a disk triage of the compromised host. Your mission 
 ### Task 3
 **Question:** The JavaScript file created a PowerShell script to advance the attack chain. What is the full directory path where the PowerShell script was created from the JS file?
 
-**Answer:** ``
+**Answer:** `C:\Users\Public\Scripts`
 
-**Explanation:**
+**Explanation:** Review the Java script code. You will find code was trying to create a powershell. You can find location of file from the chrome history review
 
 
-> *Screenshot placeholder*
+> <img width="810" height="291" alt="Q3" src="https://github.com/user-attachments/assets/09c3daa4-e2fd-45f2-8af7-65afd89fd108" />
+
 ---
 
 ### Task 4
 **Question:** The PowerShell script invoked another PowerShell command to download two additional files onto the device and then executed one of them. What are the names of the downloaded files?
 
-**Answer:** ``
+**Answer:** `venumentrada.txt, runpe.txt`
 
-**Explanation:**
+**Explanation:** Review the same directory
 
 
-> *Screenshot placeholder*
+> <img width="823" height="228" alt="Q4" src="https://github.com/user-attachments/assets/6cab4573-4f22-495e-95b3-348a0264657f" />
+
 ---
 
 ### Task 5
 **Question:** The downloaded files included obfuscated content that needed to be converted to reveal their true nature. What is the actual file type of the second downloaded file?
 
-**Answer:** ``
+**Answer:** `EXE`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 6
 **Question:** The first downloaded file converted the second file to its original format, saved it, and then executed it. What is the name of the executed file that was run after conversion?
 
-**Answer:** ``
+**Answer:** `swchost.exe`
 
-**Explanation:**
+**Explanation:** You can find this file in same directory
 
-
-> *Screenshot placeholder*
 ---
 
 ### Task 7
@@ -185,6 +181,7 @@ You have been provided with a disk triage of the compromised host. Your mission 
 
 > *Screenshot placeholder*
 ---
+
 
 
 
