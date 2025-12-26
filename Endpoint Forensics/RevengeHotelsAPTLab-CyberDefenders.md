@@ -88,7 +88,7 @@ You have been provided with a disk triage of the compromised host. Your mission 
 
 **Answer:** `T1562.001`
 
-**Explanation:** 
+**Explanation:** When you review java script file you find "-Command Set-MpPreference -DisableRealtimeMonitoring $true". This is inline with Impair Defenses (T1562) technique, often through sub-techniques like Disable or Modify Tools (T1562.001)
 
 ---
 
@@ -106,12 +106,12 @@ You have been provided with a disk triage of the compromised host. Your mission 
 ### Task 9
 **Question:** The malicious executable established communication with a C2 server infrastructure. What is the IP address of the C2 server that the malicious executable contacted?
 
-**Answer:** ``
+**Answer:** `3.122.239.15`
 
-**Explanation:**
+**Explanation:** Review sysmon event id 3 for network connections. filter for payload with swchost to get ip address
 
+> <img width="1715" height="1190" alt="Q9" src="https://github.com/user-attachments/assets/0c16e3d2-ec35-40d5-a065-c32fecf65812" />
 
-> *Screenshot placeholder*
 ---
 
 ### Task 10
@@ -131,10 +131,11 @@ You have been provided with a disk triage of the compromised host. Your mission 
 
 **Answer:** ``
 
-**Explanation:**
+**Explanation:** Filter for runkeys with Sysmon eventid 13 aa
 
 
-> *Screenshot placeholder*
+> <img width="1715" height="1188" alt="Q11" src="https://github.com/user-attachments/assets/2aa7232a-aff5-4a6e-a226-b963c1f685a5" />
+
 ---
 
 ### Task 12
@@ -142,16 +143,17 @@ You have been provided with a disk triage of the compromised host. Your mission 
 
 **Answer:** ``
 
-**Explanation:**
+**Explanation:** Filter for sysmon eventid 11 and look for .vbs files
 
 
-> *Screenshot placeholder*
+> <img width="1499" height="1187" alt="Q12" src="https://github.com/user-attachments/assets/65ba19fb-adb6-4471-9fb3-105172ad9197" />
+
 ---
 
 ### Task 13
 **Question:** To ensure the malware process couldn't be terminated easily, it used a specific Windows API function to mark itself as critical. What Windows API function does the malicious executable use to mark its process as critical to the system?
 
-**Answer:** ``
+**Answer:** `RtlSetProcessIsCritical`
 
 **Explanation:**
 
@@ -162,7 +164,7 @@ You have been provided with a disk triage of the compromised host. Your mission 
 ### Task 14
 **Question:** The threat actor deployed an additional executable specifically designed for data collection activities. What is the name of the executable dropped for data collection purposes?
 
-**Answer:** ``
+**Answer:** `Flfs6heTV2lb.exe`
 
 **Explanation:**
 
@@ -173,13 +175,15 @@ You have been provided with a disk triage of the compromised host. Your mission 
 ### Task 15
 **Question:** ter gathering sensitive data, the malware compressed the collected information into an archive for exfiltration. What is the exact timestamp when the collected data archive was created?
 
-**Answer:** ``
+**Answer:** `2025-09-28 17:16:58`
 
-**Explanation:**
+**Explanation:** Review sysmonlogs event id 11 for zip file creations
 
 
-> *Screenshot placeholder*
+> <img width="1605" height="1188" alt="Q15" src="https://github.com/user-attachments/assets/fa4487f0-4e70-4bff-b56c-4f49d5eefe50" />
+
 ---
+
 
 
 
