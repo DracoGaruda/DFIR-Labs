@@ -25,11 +25,10 @@ You have been provided with a disk triage of the compromised host. Your mission 
 
 **Answer:** `invoice82962.js`
 
-**Explanation:*Check for browswer ogsto look for potential downloads*
+**Explanation:** Check for browswer ogsto look for potential downloads*
 
 
-> *<img width="1710" height="207" alt="Q1" src="https://github.com/user-attachments/assets/bc0cbde5-ff0a-484f-bda4-73d0f0dd965a" />
-*
+> <img width="1710" height="207" alt="Q1" src="https://github.com/user-attachments/assets/bc0cbde5-ff0a-484f-bda4-73d0f0dd965a" />
 ---
 
 ### Task 2
@@ -37,11 +36,11 @@ You have been provided with a disk triage of the compromised host. Your mission 
 
 **Answer:** `hotelx.rf.gd`
 
-**Explanation:*Check for the URL for the same record*
+**Explanation:** Check for the URL for the same record*
 
 
-> *<img width="1715" height="244" alt="Q2" src="https://github.com/user-attachments/assets/290ed30f-d513-4b11-b6f0-cbb4ed7655fa" />
-*
+> <img width="1715" height="244" alt="Q2" src="https://github.com/user-attachments/assets/290ed30f-d513-4b11-b6f0-cbb4ed7655fa" />
+
 ---
 
 ### Task 3
@@ -186,6 +185,7 @@ You have been provided with a disk triage of the compromised host. Your mission 
 
 > *Screenshot placeholder*
 ---
+
 
 
 
