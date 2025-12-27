@@ -56,12 +56,8 @@ Within a short time, unusual activity triggered alerts on the Security Operation
 ### Task 4
 **Question:** Adversaries often alter installer behavior to remain invisible during deployment. Which installer flag was leveraged to suppress user-facing prompts during execution of the trojanized setup?
 
-**Answer:** ``
+**Answer:** `/VERYSILENT`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 5
@@ -250,5 +246,6 @@ Within a short time, unusual activity triggered alerts on the Security Operation
 
 > *Screenshot placeholder*
 ---
+
 
 
