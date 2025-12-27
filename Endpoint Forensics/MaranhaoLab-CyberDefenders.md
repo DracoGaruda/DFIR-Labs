@@ -6,47 +6,51 @@
 | **Platform** | Windows |
 | **Tasks** | 21 |
 
-## 1. Executive Summary
-*Summary of the incident goes here.*
+## 1. Scenario
 
-## 2. Timeline
-| Timestamp | Event |
-|-----------|-------|
-|           |       |
+A gaming enthusiast in a known organization has downloaded what they believed to be a free mod launcher for a popular survival game. The file which downloaded contained a ZIP archive with an installer that looked like a standard game setup package. 
+
+Eager to try it, the gamer downloaded the file and executed the installer. Unbeknownst to him, the program silently dropped hidden files into a directory. One of these files was configured to persist through registry keys, ensuring it would relaunch every time the system started. 
+
+Within a short time, unusual activity triggered alerts on the Security Operations Center's (SOC) in GOAT Company's monitoring dashboard. The gamer's machine was observed making outbound requests to a malicious domain and a suspicious external IP address. Endpoint logs also showed evidence of process injection, suggesting credential theft. The Security Operations Center (SOC) quickly isolated the machine and saved a full disk image for your analysis.
+
+## 2. Summary
+
 
 ## 3. Challenge Solutions
 
 ### Task 1
 **Question:** Analysts identified an external object that acted as the patient-zero delivery mechanism. Which remote resource URL initiated the chain of compromise by providing the archive disguised as a legitimate game utility?
 
-**Answer:** ``
+**Answer:** `https://drive.usercontent.google.com/uc?id=1mIxhfZXmcUT2mbKNuahsRI4S_rzVUFKW&export=download`
 
-**Explanation:**
+**Explanation:** Review chrome History log file. Look for URL-downloads. 
 
+> <img width="1712" height="325" alt="Q1" src="https://github.com/user-attachments/assets/5b186164-797d-4746-ade2-65c014b02567" />
 
-> *Screenshot placeholder*
 ---
 
 ### Task 2
 **Question:** In reconstructing the timeline of compromise, which precise timestamp correlates to the adversary's delivery vector entering the victim environment as a ZIP file?
 
-**Answer:** ``
+**Answer:** `2025-09-17 10:10`
 
-**Explanation:**
+**Explanation:** look for the start time of the download from previous log. Convert the timestamp 
 
+> <img width="1713" height="214" alt="Q2" src="https://github.com/user-attachments/assets/b4963e8a-caaa-420e-b166-938c2804d604" />
 
-> *Screenshot placeholder*
 ---
 
 ### Task 3
 **Question:** The ZIP archive's decompression exposed a loader binary that masqueraded as a legitimate launcher. What was the executable responsible for initializing this staged intrusion?
 
-**Answer:** ``
+**Answer:** `Fnafdoomlauncher.exe`
 
-**Explanation:**
+**Explanation:** create MFT csv with zimmerman tools and look for suspcious files after the download of the zip file
 
 
-> *Screenshot placeholder*
+> <img width="1717" height="399" alt="Q3" src="https://github.com/user-attachments/assets/e2ffd3c4-1134-4043-8011-fde8ec7cbd8d" />
+
 ---
 
 ### Task 4
@@ -246,4 +250,5 @@
 
 > *Screenshot placeholder*
 ---
+
 
