@@ -2,17 +2,18 @@
 
 | Metadata | Details |
 |----------|---------|
-| **Date** | 2025-12-28 |
+| **Date** | 2025-12-22 |
 | **Platform** | Azure |
 | **Tasks** | 10 |
 
-## 1. Executive Summary
-*Summary of the incident goes here.*
+## 1. Scenario
 
-## 2. Timeline
-| Timestamp | Event |
-|-----------|-------|
-|           |       |
+On November 14, 2025, security monitoring detected suspicious authentication activity in the Azure tenant, with anomalous sign-in patterns from multiple geographic locations. Shortly after, automated alerts flagged unauthorized administrative actions and configuration changes within the environment.
+
+You have been provided with Azure sign-in logs, audit logs, and storage access logs from the affected tenant. Your mission is to investigate the incident, determine how the attacker gained initial access, identify what persistence mechanisms were established, document any privilege changes, and confirm whether sensitive data was accessed or exfiltrated
+
+## 2. Summary
+
 
 ## 3. Challenge Solutions
 
@@ -125,4 +126,5 @@
 
 > *Screenshot placeholder*
 ---
+
 
