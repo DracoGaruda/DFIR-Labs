@@ -63,23 +63,19 @@ You have been provided with Azure sign-in logs, audit logs, and storage access l
 ### Task 5
 **Question:** To establish persistence, the attacker registered malicious applications. What is the name of the first application they created?
 
-**Answer:** ``
+**Answer:** `OfficeRead`
 
-**Explanation:**
+**Explanation:** Review audit logs and filter for application activity thats associated with malicious IP 52.221.180.165
 
+> <img width="1667" height="382" alt="Q6" src="https://github.com/user-attachments/assets/d5d03a61-cbf7-45e1-9523-304d1c6e5f96" />
 
-> *Screenshot placeholder*
 ---
 
 ### Task 6
 **Question:** The attacker created a second application to ensure persistent access, this one intended to access directory information. What is the name of this second application?
 
-**Answer:** ``
+**Answer:** `VaultApp`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 7
@@ -97,12 +93,8 @@ You have been provided with Azure sign-in logs, audit logs, and storage access l
 ### Task 8
 **Question:** What highly privileged role was assigned to the second user account to grant it administrative control over the tenant?
 
-**Answer:** ``
+**Answer:** `Global Administrator`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 9
@@ -127,6 +119,7 @@ You have been provided with Azure sign-in logs, audit logs, and storage access l
 
 > *Screenshot placeholder*
 ---
+
 
 
 
