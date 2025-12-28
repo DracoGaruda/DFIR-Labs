@@ -145,67 +145,50 @@ As a SOC analyst, you've been tasked with investigating these authentication ano
 ### Task 13
 **Question:** Investigation revealed that despite the widespread attack, only one account was successfully compromised. What is the user principal name of the account that was successfully breached?
 
-**Answer:** ``
+**Answer:** `louisa.hartis@compliantsecure.store`
 
-**Explanation:**
+**Explanation:** filter for successfull logons 
 
+> <img width="1667" height="1121" alt="Q13" src="https://github.com/user-attachments/assets/741b61f9-d6b2-425d-9ede-f8fc5a367808" />
 
-> *Screenshot placeholder*
 ---
 
 ### Task 14
 **Question:** What Conditional Access policy would have prevented 99% of this password spray attack according to Microsoft's research?
 
-**Answer:** ``
+**Answer:** `Block Legacy Authentication:`
 
-**Explanation:**
+**Explanation:** As password spray often uses older protocols (IMAP, POP, SMTP) that bypass MFA. A CA policy can block these entirely for most users, stopping the attack at the first step.
 
-
-> *Screenshot placeholder*
 ---
 
 ### Task 15
 **Question:** When implementing Azure AD Password Protection to prevent compromised accounts, what is the maximum number of password entries you can add to the custom banned password list?
 
-**Answer:** ``
+**Answer:** `1000`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 16
 **Question:** For federated environments, what Windows Server 2019 feature provides similar protection to Azure AD Smart Lockout?
 
-**Answer:** ``
+**Answer:** `Extranet Smart Lockout`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 17
 **Question:** In your custom analytics rule configuration, navigate to the "Automated response" tab where you can attach playbooks. If you were to create a playbook that revokes all active sessions for compromised users detected by this rule, what Microsoft Graph API method would the playbook use to invalidate all user sessions?
 
-**Answer:** ``
+**Answer:** `revokeSignInSessions`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 18
 **Question:** According to NIST guidelines referenced in the mitigation section, what is the recommended minimum password length for modern password policies?
 
-**Answer:** ``
+**Answer:** `8`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
+
 
 
