@@ -6,13 +6,15 @@
 | **Platform** | Azure |
 | **Tasks** | 18 |
 
-## 1. Executive Summary
-*Summary of the incident goes here.*
+## 1. Scenario
 
-## 2. Timeline
-| Timestamp | Event |
-|-----------|-------|
-|           |       |
+A mid-sized technology company called Compliant Secure, with 50 employees, has recently migrated to Microsoft 365. During a routine security review, the SOC team discovered suspicious authentication patterns.
+
+As a SOC analyst, you've been tasked with investigating these authentication anomalies, implementing detection mechanisms, and hardening the Azure AD environment against
+
+## 2. Summary
+
+
 
 ## 3. Challenge Solutions
 
@@ -21,10 +23,8 @@
 
 **Answer:** `50126`
 
-**Explanation:**
-Just review the sign-in alerts
+**Explanation:** Just review the sign-in alerts
 
-> *Screenshot placeholder*
 ---
 
 ### Task 2
@@ -32,98 +32,92 @@ Just review the sign-in alerts
 
 **Answer:** `3.123.15.9`
 
-**Explanation:**
-Filter logs based on aggregate fr the count
+**Explanation:** Filter logs based on aggregate fr the count
 
-> *Screenshot placeholder*
+> <img width="1412" height="728" alt="Q2" src="https://github.com/user-attachments/assets/a471e0b7-23e0-41f9-94f8-94fe7906940e" />
+
 ---
 
 ### Task 3
 **Question:** The attacker appears to be using a specific user agent string across all spray attempts. What is the user agent string identified in the attack?
 
-**Answer:** ``
+**Answer:** `Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36`
 
-**Explanation:**
+**Explanation:** review user agent field
 
+> <img width="1672" height="591" alt="Q3" src="https://github.com/user-attachments/assets/65d2c355-103e-4457-9936-bd2d66436a78" />
 
-> *Screenshot placeholder*
 ---
 
 ### Task 4
 **Question:** Smart Lockout events are crucial for identifying password spray victims. What is the specific sign-in error code that indicates an account has been locked out by Azure AD Smart Lockout?
 
-**Answer:** ``
+**Answer:** `50053`
 
-**Explanation:**
+**Explanation:** filte for the error ids
 
+> <img width="1592" height="755" alt="Q4" src="https://github.com/user-attachments/assets/f1438413-8c09-4726-893d-442c0c53b8ec" />
 
-> *Screenshot placeholder*
 ---
 
 ### Task 5
 **Question:** What time (UTC) in CreatedDateTime did the password spray attack begin based on the first failed authentication attempt?
 
-**Answer:** ``
+**Answer:** `6/29/2025, 6:35:06`
 
-**Explanation:**
+**Explanation:** filter with creation date time coloumn
 
-
-> *Screenshot placeholder*
 ---
 
 ### Task 6
 **Question:** How many unique user accounts in the Compliant Secure company were targeted in this password spray attack?
 
-**Answer:** ``
+**Answer:** `89`
 
-**Explanation:**
+**Explanation:** filter by the result type 50126 and aggregate user principal name by count
 
 
-> *Screenshot placeholder*
+> <img width="1483" height="1051" alt="Q6" src="https://github.com/user-attachments/assets/dc6fd181-2d52-425a-9e47-9ce79e21d63f" />
+
 ---
 
 ### Task 7
 **Question:** The attack originated from a single country. What is the name of the region where the attack originated?
 
-**Answer:** ``
+**Answer:** `DE`
 
-**Explanation:**
+**Explanation:** Review LocationDetails
 
+> <img width="1372" height="863" alt="Q7" src="https://github.com/user-attachments/assets/e7c1fe12-8a21-4a22-be61-b6625689803e" />
 
-> *Screenshot placeholder*
 ---
 
 ### Task 8
 **Question:** In Microsoft Sentinel, navigate to Content Hub and install the Microsoft Entra ID solution. Once installed, go to Analytics > Rule templates and you'll see several analytics rules related to password spray attacks. What is the name of the analytics rule that identifies evidence of failures from multiple accounts against Microsoft Entra ID applications?
 
-**Answer:** ``
+**Answer:** `Password spray attack against Microsoft Entra ID application`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 9
 **Question:** In the rule configuration, there's a parameter called authenticationThreshold that defines how many failed account attempts from a single IP address trigger an alert. Based on the attack patterns observed in this incident, what is the maximum value you should set for authenticationThreshold to ensure the rule would have detected this specific attack?
 
-**Answer:** ``
+**Answer:** `3`
 
-**Explanation:**
+**Explanation:** From erlier logs review different ips have  failed account logs
 
-
-> *Screenshot placeholder*
 ---
 
 ### Task 10
 **Question:** Review the KQL query in your analytics rule and locate the parameter that defines the time window for grouping authentication attempts. What is the value (in minutes) set for the authenticationWindow parameter?
 
-**Answer:** ``
+**Answer:** `20`
 
-**Explanation:**
+**Explanation:** Just review the kql query for the authentication window
 
 
-> *Screenshot placeholder*
+> <img width="1089" height="393" alt="Q10" src="https://github.com/user-attachments/assets/599f36a5-17cb-46f4-8c5c-780b887f5f0b" />
+
 ---
 
 ### Task 11
@@ -213,4 +207,5 @@ Filter logs based on aggregate fr the count
 
 > *Screenshot placeholder*
 ---
+
 
