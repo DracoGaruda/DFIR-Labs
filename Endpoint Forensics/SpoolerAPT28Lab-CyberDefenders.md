@@ -12,7 +12,7 @@ The SOC team was notified by the IT department regarding a potentially compromis
 
 As a forensics investigator, you have been provided with a disk image of Keelaâ€™s workstation. Your task is to perform a comprehensive investigation to uncover any signs of malicious activity, reconstruct the timeline of events, and assess the scope and impact of the potential compromise.
 
-## 2. Sumamry
+## 2. DFIR Analysis Summary
 
 
 
@@ -21,23 +21,22 @@ As a forensics investigator, you have been provided with a disk image of Keelaâ€
 ### Task 1
 **Question:** What is the full name of the previous user of this machine, before it was assigned to Keela?
 
-**Answer:** ``
+**Answer:** `Yanisara Denthongkul`
 
-**Explanation:**
+**Explanation:** SAM registry hive tracks accounts. So review SAM registry hive with registry explorer
 
-
-> *Screenshot placeholder*
+> <img width="1052" height="252" alt="Q1" src="https://github.com/user-attachments/assets/475eb85b-9849-432f-b0c4-49866f1853b9" />
 ---
 
 ### Task 2
 **Question:** The previous user downloaded an archive from a compromised internal website that led to the initial infection. When was this archive successfully downloaded?
 
-**Answer:** ``
+**Answer:** `2025-08-10 11:11`
 
-**Explanation:**
+**Explanation:** Review the chrome History db file to review downloads. Browse to C\Users\yanis\AppData\Local\Google\Chrome\User Data\Default review History file.
+Upon review you find one file download of HR.zip. Convert start time from Chrome timestamp to Human date.
 
-
-> *Screenshot placeholder*
+> <img width="1712" height="388" alt="Q2" src="https://github.com/user-attachments/assets/fb54823c-2c4c-46ad-8526-f92f5027f97c" />
 ---
 
 ### Task 3
@@ -182,5 +181,6 @@ As a forensics investigator, you have been provided with a disk image of Keelaâ€
 
 > *Screenshot placeholder*
 ---
+
 
 
