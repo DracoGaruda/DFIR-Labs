@@ -15,7 +15,7 @@ Initial triage reveals evidence of file creation in unusual locations and system
 
 You have been provided with a disk triage of the compromised host. Your mission is to reconstruct the complete attack chain, identify all malicious components, and determine the full scope of the compromise
 
-## 2. Summary
+## 2. DFIR Analysis Summary
 
 The incident originated from a phishing campaign that directed the user to the compromised domain hotelx.rf.gd, resulting in the download of a malicious JavaScript file named invoice82962.js. Upon execution, this file utilized a PowerShell script located in C:\Users\Public\Scripts to retrieve two intermediate text files, venumentrada.txt and runpe.txt, which were then deobfuscated to launch the primary payload, swchost.exe. To evade detection and secure its operation, the malware employed MITRE ATT&CK technique T1562.001 by disabling real-time monitoring, modifying 12 security-related registry keys, and invoking the RtlSetProcessIsCritical API to prevent the process from being terminated.
 
@@ -178,6 +178,7 @@ Once established, the malware initiated command and control communication with t
 > <img width="1605" height="1188" alt="Q15" src="https://github.com/user-attachments/assets/fa4487f0-4e70-4bff-b56c-4f49d5eefe50" />
 
 ---
+
 
 
 
