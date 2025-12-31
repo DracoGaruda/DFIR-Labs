@@ -1,5 +1,6 @@
-<img width="377" height="127" alt="logo" src="https://github.com/user-attachments/assets/6dc86a3a-dce6-496e-9e94-8779d1a20d70" />
-# DFIR Report: WorkFromHome
+# <img width="377" height="127" alt="logo" src="https://github.com/user-attachments/assets/0d257f14-bcb0-4583-be22-de63cbe99fed" />
+DFIR Report: WorkFromHome
+
 
 | Metadata | Details |
 |----------|---------|
