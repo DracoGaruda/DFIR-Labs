@@ -1,4 +1,4 @@
-# ![Screenshot 2025-06-15 223943](https://github.com/user-attachments/assets/55577135-f9bf-4b6d-8937-87885d76a6ef)Unsupervised - DFIR Analysis (HackTheBox)
+# ![Screenshot 2025-06-15 223943](https://github.com/user-attachments/assets/55577135-f9bf-4b6d-8937-87885d76a6ef)DFIR Analysis - Unsupervised
 
 ##   Scenario Overview
 
