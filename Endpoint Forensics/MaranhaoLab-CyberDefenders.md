@@ -58,28 +58,30 @@ Within a short time, unusual activity triggered alerts on the Security Operation
 
 **Answer:** `/VERYSILENT`
 
+**Explanation:** Review sysmon logs for event id 1 and filter for Fnafdoomlauncher
+
+> <img width="803" height="66" alt="Q4" src="https://github.com/user-attachments/assets/a8444cf4-f470-4900-be1b-95b9d1e798db" />
+
 ---
 
 ### Task 5
 **Question:** Forensic correlation across endpoints requires file-level fingerprinting. What SHA1 hash uniquely represents the dropper binary that initiated further payload deployment?
 
-**Answer:** ``
+**Answer:** `FCB94C06FA80CE277B47E545B3805AB38BB6ACF4`
 
-**Explanation:**
+**Explanation:** the above log provides the inital dropper Fnafdoomlauncher.tmp
 
+> <img width="1717" height="36" alt="Q5" src="https://github.com/user-attachments/assets/03d58a70-84e2-4bd1-939d-f36e31e4fc09" />
 
-> *Screenshot placeholder*
 ---
 
 ### Task 6
 **Question:** Post-installation, the secondary payload did not remain in temporary directories but was staged in a user-space program folder. Identify the exact directory path used for this execution pivot.
 
-**Answer:** ``
+**Answer:** `C:\Users\Levi\AppData\Local\Programs\Microsoft Updater\`
 
 **Explanation:**
 
-
-> *Screenshot placeholder*
 ---
 
 ### Task 7
@@ -96,100 +98,77 @@ Within a short time, unusual activity triggered alerts on the Security Operation
 ### Task 8
 **Question:** What was the complete file path of the binary embedded within the persistence mechanism to guarantee re-execution after reboot?
 
-**Answer:** ``
+**Answer:** `C:\Users\Levi\AppData\Local\Programs\Microsoft Updater\Updater.exe`
 
-**Explanation:**
+**Explanation:** Review sysmon logs for event id 1 to review reg.exe to review creation of registry keys
 
-
-> *Screenshot placeholder*
+> <img width="3241" height="24" alt="Q8" src="https://github.com/user-attachments/assets/66e5f862-940f-4bf8-9243-ed0cb0446e84" />
 ---
 
 ### Task 9
 **Question:** Temporal analysis of registry modifications showed the exact moment persistence was locked in. What is the date and time this key entry was created?
 
-**Answer:** ``
+**Answer:** `2025-09-17 10:13`
 
-**Explanation:**
+**Explanation:** Above logs provides this info
 
-
-> *Screenshot placeholder*
 ---
 
 ### Task 10
 **Question:** Post-installation, the adversary concealed its artifacts at the file-system level. Which native Windows utility and attribute combination was used to render both files and directories hidden and system-protected?
 
-**Answer:** ``
+**Answer:** `attrib +h +s`
 
-**Explanation:**
+**Explanation:** Reviewing same Sysmon event id 1 would provide proof for these these command
 
+> <img width="766" height="76" alt="Q10" src="https://github.com/user-attachments/assets/d8a7ee61-6586-475a-b2b9-5ab11664742c" />
 
-> *Screenshot placeholder*
 ---
+
+If you filter sysmon event id 1 and for cmd.exe you would find multiple discovery commands being run. below image provides all the discovery commands that where run by updater.exe
+
+> <img width="2262" height="324" alt="Q11-Q16" src="https://github.com/user-attachments/assets/4cb9fc5e-95d4-40bf-925e-905d127ba1e2" />
 
 ### Task 11
 **Question:** Investigators observed the malware pulling system-level metadata that revealed the installed edition of Windows (e.g., "Microsoft Windows 10 Pro"). This information could later be used by the attacker to determine compatibility with payload execution. Which exact query facilitated this operating system enumeration?
 
-**Answer:** ``
+**Answer:** `wmic os get Caption`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 12
 **Question:** To assess whether the compromised system had sufficient processing resources or was running in a sandbox with emulated hardware, the malware issued a command to extract the processor's vendor and model string. What specific query enabled this reconnaissance?
 
-**Answer:** ``
+**Answer:** `wmic cpu get Name`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 13
 **Question:** As part of its environment fingerprinting, the malware attempted to identify graphics hardware to help distinguish between a physical workstation and a low-resource virtual machine. Which query would return the video controller model?
 
-**Answer:** ``
+**Answer:** `wmic path win32_VideoController get Name`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 14
 **Question:** The malware generated a unique victim identifier that would remain stable across reboots and reinstalls by retrieving a machine's hardware UUID. Which WMI command was responsible for collecting this globally unique identifier?
 
-**Answer:** ``
+**Answer:** `wmic csproduct get UUID`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 15
 **Question:** During host triage, analysts identified a query that enumerated logical drives along with their free space and size. This could help an attacker determine whether the host was worth further exploitation (e.g., data exfiltration feasibility). Which WMI command produced this disk inventory?
 
-**Answer:** ``
+**Answer:** `wmic logicaldisk get Caption,FreeSpace,Size,Description /format:list`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 16
 **Question:** Unlike transient licensing tokens stored in tokens.dat, the malware pursued a static registry artifact used as a backup for Windows activation. Identify the precise registry entry (hive, key path, and value) that serves as a fallback product key reference.
 
-**Answer:** ``
+**Answer:** `HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform\BackupProductKeyDefault`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 17
@@ -246,6 +225,7 @@ Within a short time, unusual activity triggered alerts on the Security Operation
 
 > *Screenshot placeholder*
 ---
+
 
 
 
