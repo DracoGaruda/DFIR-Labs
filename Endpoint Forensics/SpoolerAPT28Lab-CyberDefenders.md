@@ -1,4 +1,4 @@
-# DFIR Report: Spooler - APT28 Lab
+# DFIR Report: Spooler - APT28 Lab - Pending
 
 | Metadata | Details |
 |----------|---------|
@@ -119,12 +119,11 @@ Upon review you find one file download of HR.zip. Convert start time from Chrome
 ### Task 10
 **Question:** Another Boot or Logon Autostart persistence was configured to execute a DLL payload remotely through the Print Spooler service. What is the MITRE ATT&CK Technique ID associated with this persistence mechanism?
 
-**Answer:** ``
+**Answer:** `EdgeUpdate`
 
-**Explanation:**
+**Explanation:** Review run reistry keys for Yanis in NTUser.dat
 
-
-> *Screenshot placeholder*
+> <img width="1716" height="239" alt="image" src="https://github.com/user-attachments/assets/8bb0caf0-4e93-45f6-8966-e528bab7bef4" />
 ---
 
 ### Task 11
@@ -181,6 +180,7 @@ Upon review you find one file download of HR.zip. Convert start time from Chrome
 
 > *Screenshot placeholder*
 ---
+
 
 
 
