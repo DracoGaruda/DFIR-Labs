@@ -83,31 +83,26 @@ If you review logs with requests for oldsite/. Path traversal vulnerability is e
 ### Task 7
 **Question:** After authenticating to the MySQL database, the threat actor targeted a specific database for exfiltration. Which database did he access?
 
-**Answer:** ``
+**Answer:** `vtubermusic`
 
-**Explanation:**
+**Explanation:** Reviewing Xampp logs would give you log requests with parameter database and table requests
 
-
-> *Screenshot placeholder*
+> <img width="1448" height="15" alt="Q7" src="https://github.com/user-attachments/assets/ac276d31-8d82-48bc-b835-63c057648077" />
 ---
 
 ### Task 8
 **Question:** Which table did the threat actor export from the database?
 
-**Answer:** ``
+**Answer:** `users`
 
-**Explanation:**
-
-
-> *Screenshot placeholder*
 ---
 
 ### Task 9
 **Question:** On the next day, the threat actor logged into the MySQL database again using a different IP address. What is this IP address?
 
-**Answer:** ``
+**Answer:** `182.44.8.254`
 
-**Explanation:**
+**Explanation:** Reviewing the logs would provide a different IP address making requests 
 
 
 > *Screenshot placeholder*
@@ -116,23 +111,21 @@ If you review logs with requests for oldsite/. Path traversal vulnerability is e
 ### Task 10
 **Question:** The threat actor used SQL commands to create a webshell. What is the full path of this webshell file on the system?
 
-**Answer:** ``
+**Answer:** `C:\xampp\htdocs\config_old.php`
 
-**Explanation:**
+**Explanation:** one of thlogs provides insite that config_old.php is being hidden. Got to MFT records created with help of MFTECmd.exe and filter for config_old.php
 
-
-> *Screenshot placeholder*
+> <img width="1379" height="98" alt="Q10_2" src="https://github.com/user-attachments/assets/c1bf594b-c12c-4c5e-8f29-03a431f3d017" />
 ---
 
 ### Task 11
 **Question:** The threat actor used a Living-off-the-Land Binary (LOLBin) to hide the webshell. What MITRE ATT&CK technique corresponds to this activity?
 
-**Answer:** ``
+**Answer:** `T1564.001`
 
-**Explanation:**
+**Explanation:** attrib is used to hide the file. This technique is called "Hide Artifacts: Hidden Files and Directories"
 
-
-> *Screenshot placeholder*
+> <img width="583" height="81" alt="Q10_1" src="https://github.com/user-attachments/assets/ed75e47f-dbbc-4783-857d-76e74f9d8c3d" />
 ---
 
 ### Task 12
@@ -161,10 +154,9 @@ Once you decode yoou find following code
 ### Task 14
 **Question:** After establishing the C2 connection, the threat actor attempted several methods to bypass User Account Control (UAC). One method used a PowerShell script. What is the name of this script?
 
-**Answer:** ``
+**Answer:** `LykIsnWn.ps1`
 
 **Explanation:**
-
 
 > *Screenshot placeholder*
 ---
@@ -205,12 +197,10 @@ Once you decode yoou find following code
 ### Task 18
 **Question:** Which MITRE ATT&CK technique did the threat actor use to establish persistence through registry modifications that execute a payload upon a program's silent termination?
 
-**Answer:** ``
+**Answer:** `T1546.012`
 
 **Explanation:**
 
-
-> *Screenshot placeholder*
 ---
 
 ### Task 19
@@ -234,5 +224,6 @@ Once you decode yoou find following code
 
 > *Screenshot placeholder*
 ---
+
 
 
